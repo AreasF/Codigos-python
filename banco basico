@@ -1,0 +1,43 @@
+print("Bom dia, vamos criar sua conta no banco, por favor, informe o rendimento mensal\n")
+janeiro = fevereiro = março = abril = maio = junho = julho = agosto = setembro = outubro = novembro = dezembro = 0
+print("Qual seu rendimento no mês de janeiro? ")
+janeiro = float(input())
+print("Qual seu rendimento no mês de fevereiro? ")
+fevereiro = float(input())
+print("Qual seu rendimento no mês de março? ")
+março = float(input())
+print("qual seu rendimento no mes de abril? ")
+abril = float(input())
+print("qual seu rendimento no mes de maio? ")
+maio = float(input())
+print("qual seu rendimento no mes de junho? ")
+junho = float(input())
+print("qual seu rendimento no mes de julho? ")
+julho = float(input())
+print("qual seu rendimento no mes de agosto? ")
+agosto = float(input())
+print("qual seu rendimento no mes de setembro? ")
+setembro = float(input())
+print("qual seu rendimento no mes de outubro? ")
+outubro = float(input())
+print("qual seu rendimento no mes de novembro? ")
+novembro = float(input())
+print("qual seu rendimento no mes de dezembro? ")
+dezembro = float(input())
+
+meses = [janeiro, fevereiro, março, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro]
+conta_corrente = float(sum(meses))
+
+print("Bem-vindo ao Banco Python, seu saldo é de: ", conta_corrente)
+opcao = int(input("Informe a operação desejada: \n[1] para sacar \n[2] para tirar extrato: "))
+
+if opcao == 1:
+    valor = float(input("Informe a quantia do saque: "))
+    if valor <= conta_corrente:
+        print("Imprimindo o valor desejado, seu saldo agora é de:", conta_corrente - valor)
+    else:
+        print("Você não possui o valor desejado na conta corrente.")
+elif opcao == 2:
+    print("Exibindo o extrato:", conta_corrente)
+else:
+    print("Opção inválida, tente novamente.")
